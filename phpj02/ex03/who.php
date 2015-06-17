@@ -13,6 +13,6 @@ while ($utmpx = fread($fd, 628))
 ksort($user);
 foreach($user as $line => $data)
 {
-		printf("%s %s  %s \n", $data["user"], $line, date("M  j H:i", $data["time"]));
+		printf("%s %s %s \n", $data["user"], $line, date(" M j H:i",$data["time"]));
 }
 ?>
